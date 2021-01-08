@@ -1,0 +1,506 @@
+/*===================== 
+===== Basic Setup =====
+=======================*/
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Titillium Web', sans-serif;
+    text-rendering: optimizeLegibility;
+    line-height: 1.3;
+}
+ul li{
+    list-style-type: none;
+}
+/* Heading */
+h1{
+    font-size: 4.2rem;
+    color: #fff;
+    display: inline-block;
+}
+.clearfix::after{
+    content: "";
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+
+/*============================
+===== Reusable component =====
+==============================*/
+
+.row{
+    max-width: 114rem;
+    margin: 0 auto;
+}
+section{
+    padding: 8rem 0;
+}
+h2{
+    font-size: 4rem;
+    text-transform: uppercase;
+    letter-spacing:0.3rem;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 2rem;
+    color: #fff;
+}
+h2::after{
+    content: "";
+    display: block;
+    height: .4rem;
+    background: #fff;
+    width: 8.5rem;
+    margin: auto;
+    margin-top: 2rem;
+    text-align: center;
+
+}
+h3{
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #fff;
+}
+h4{
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-top: 2.5rem;
+}
+.box{
+    padding: 0 2%;
+}
+.box p{
+    font-size: 1.6rem;
+    font-weight: 300;
+    margin-top: 2rem;
+    color: #fff;
+}
+
+/* Button  */
+.btn:link,
+.btn:visited,
+.btn{
+    background: #333;
+    border-bottom: .3rem solid #000;;
+    font-size: 1.8rem;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 1.5rem 6rem;
+    border-radius: .3rem;
+    display: inline-block;
+    margin-top: 4.5rem;
+  
+}
+/* Little description */
+.little-des{
+    font-size: 1.8rem;
+    width: 60%;
+    margin-left: 20%;
+    line-height: 3rem;
+
+}
+
+
+/*============================
+===== Header Section =====
+==============================*/
+header{
+    background:linear-gradient(rgba(135, 80, 156, 0.9), rgba(135, 80, 156, 0.9)),url("img/hero-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center center;
+    background-attachment: fixed;
+    height:85vh;
+    position: relative;
+}
+.logo{
+    height: 3.55rem;
+    width: auto;
+    margin-top: 3.5rem;
+    float: left;
+}
+.hero-text-box{
+    width: 114rem;
+    
+}
+/* main navigation */
+.main-nav {
+    float: right;
+    margin-top: 4rem;
+}
+.main-nav li{
+    display: inline-block;
+    margin-left: 1rem;
+}
+.main-nav li:first-child{
+    margin-left: 0;
+}
+.main-nav li a:link,
+.main-nav li a:visited{
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: rgba(100, 58,121, 0);
+    padding:6px 16px;
+    border-radius: 3px;
+    display: inline-block;
+    font-size: 1.6rem;
+    transition: 0.3s;
+}
+.main-nav li:hover a:link,
+.main-nav li:hover a:visited{   
+    background:rgba(100, 58,121, 1);
+}
+.active{
+    background:rgba(100, 58,121, 1);
+    border-radius: .3rem;
+}
+.hero-text-box{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align:center;
+}
+.btn-hero:link,
+.btn-hero:visited{
+    background: #eb7d4b;
+    border-color: #c86a40;
+}
+/* Sticky navigation */
+
+.sticky{
+    position: fixed;
+    top: 0;
+    left: 0;  
+    width: 100%;
+    background: #87509c;
+    padding: 1rem 0;
+    box-shadow: 0 0.2rem 0.5rem rgba(255, 255, 255, 0.726); 
+  }
+  
+  .sticky .logo,
+  .sticky .main-nav{
+      margin-top: 0;
+  }
+  .hero-text-box{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      text-align: center;
+      width: 114rem;
+  }
+  
+  .btn-hero:link,
+  .btn-hero:visited{
+      background: #eb7d4b;
+      border-color: #c86a40;
+  }
+/*============================
+===== Services Section =====
+==============================*/
+.services-section{
+    color: #fff;
+    text-align: center;
+    background: linear-gradient(rgba(23, 194, 163, 0.9),rgba(23, 194, 163, 0.9)), url("img/services-bg.jpg") ;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+}
+.services-section h2::after{
+    background: #14a58c;
+}
+.services-icon{
+    height: 12rem;
+    margin-top: 4.5rem;
+    margin-bottom: 3.5rem;
+}
+/*============================
+===== Team Section =====
+==============================*/
+.team-section{
+    background: linear-gradient(rgba(231,241,248,0.9),rgba(231,241,248,0.9)),url(img/team-bg.jpg);
+    text-align: center;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    background-position: cover cover;
+    background-attachment: fixed;
+}
+.team-section h2{
+    color: #3c4761;
+    margin: auto;
+}
+.team-section h2::after{
+    color:#c8d9e5;
+}
+.team-member{
+    margin-top: 4.5rem;
+    margin-bottom: 3.5rem;
+    height: 20rem;
+    width: 20rem;
+    border-radius: 50%;
+}
+.team-section h3{
+    color:#27283d;  
+}
+.role{
+    color: #30bae7;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    margin-top: .5rem;
+}
+.team-section .box p{
+    color: #3c4761;
+}
+.social-link{
+    margin-top: 4.5rem;
+}
+.social-link ul li{
+    display:inline-block;
+    margin: 0 .5rem;
+}
+.social-link ul li a:link{
+    color: #fff;
+}
+.social-link ul li a:link i::before{
+    background: #bdd1df;
+    height: 2rem;
+    width: 2rem;
+    display:inline-block;
+    font-size: 2rem;
+    padding: 1rem;
+    border-radius: 50%;
+    transition: .5s;
+}
+.social-link ul li a:hover i::before{
+    background: #393939;
+    transform: rotate(360deg);
+}
+
+/* =================== */
+/* Skill drction */
+/* =================== */
+.skill-section{
+    color: #3c4761;
+    text-align: center;
+    background: linear-gradient(rgba(255, 255, 255, 0.8),rgba(255, 255, 255, 0.8)) ,url("img/skill-bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.skill-section h2,
+.skill-section h3{
+    color: #3c4761;
+}
+.skill-section h2::after{
+    background: #dfe8ed;
+}
+.skill-section .box{
+    margin-top: 4.5rem;
+}
+svg.radial-progress circle{
+    stroke-width: 5;
+}
+
+svg.web-design circle{
+    stroke: #30bae7;
+}
+
+svg.html-css circle{
+    stroke: #d74680;
+}
+
+svg.gc-design circle{
+    stroke: #15c7a8;
+}
+svg.ui-ux circle{
+    stroke: #eb7d4b;
+}
+/* =================== */
+/*Portfolio section*/
+/* =================== */
+.portfolio-section{
+    background: linear-gradient(rgba(255, 221, 153, 0.8),rgba(255, 221, 153, 0.8)),url("img/portfolio-bg.jpg");
+    background-size: cover;
+    color: #393939;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    text-align: center;
+}
+.portfolio-section h2::after{
+    background: #e5c37f;
+}
+
+.portfolio-filter{
+    margin: 4.5rem 0;
+}
+.portfolio-filter button{
+    background: #ebc985;
+    font-size: 1.8rem;
+    padding: 1.0rem 2.0rem;
+    border: none;
+    border-radius: 0.5rem;
+    text-transform: uppercase;
+    margin: 0 0.5rem;
+    
+}
+.portfolio-filter button:hover{
+    cursor: pointer;
+    box-shadow: inset 0rem 0.3rem 0.5rem #393939;
+}
+
+.portfolio-image{
+    width: 100%;
+    height: 30rem;
+}
+
+.portfolio-section .col:nth-child(3){
+    margin-left: 0rem;
+}
+
+.portfolio-section .btn-load{
+    background: #17c2a4;
+    border-color: #14a58c;
+}
+
+.portfolio-section .mixitup-control-active{
+    background: #fff;
+}
+/* =================== */
+/*Testimonial section*/
+/* =================== */
+.testimonial{
+    background: linear-gradient(rgba(215, 70, 128, 0.89),rgba(215, 70, 128, 0.89)), url("img/testimonial-bg.jpg");
+    background-size: cover;
+    color: #fff;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+}
+.testimonial h2, .little-des{
+    text-align: center;
+}
+.testimonial .col:nth-child(3){
+    margin-left: 0rem;
+}
+.testimonial .col:nth-child(1),
+.testimonial .col:nth-child(2){
+    margin-top: 4rem;
+}
+
+.testimonial .col:nth-child(3),
+.testimonial .col:nth-child(4){
+    margin-top: 8rem;
+}
+.client-pic{
+    width: 10rem;
+    float: left;
+}
+
+.client-pic img{
+    height: 8rem;
+    border-radius: 50%;
+    margin-bottom: 3rem;
+}
+.client-review{
+    float: left;
+    width: 35rem;
+}
+.client-review p{
+    font-size: 2.1rem;
+    font-style: italic;
+    margin-top: 0;
+    margin-bottom: 2rem;
+}
+.client-review .role{
+    color: #ffdd99;
+}
+/* =================== */
+/* CONTACT SECTION */
+/* =================== */
+.contact-section{
+    background: linear-gradient(rgba(60, 84, 154, 0.842),rgba(60, 84, 154, 0.842)),url("img/contact-bg.jpg");
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+}
+.contact-section h2::after{
+    background-color: #273a71;
+}
+.contact-section .little-des{
+    color: #fff;
+}
+.contact-section form input[type="text"],
+.contact-section form input[type="email"],
+.contact-section form textarea{
+    background: #273a71;
+    border: 0.1rem solid #273a71;
+    width: 100%;
+    padding: 1.5rem;
+    border-radius: 0.5rem ;
+    font-size: 1.8rem;
+    color: #fff;
+    margin: 0.5rem 0;
+}
+.contact-section textarea{
+    height: 20rem;
+}
+.contact-section form ::placeholder{
+    color: #fff;
+    opacity: 1;
+}
+.btn-submit{
+    border: 0;
+    background: #30bae7;
+    border-bottom: 0.3rem solid #299ec5;
+}
+.btn-submit:hover{
+    cursor: pointer;
+}
+/* ============= */
+/* Footer */
+/* ========== */
+footer{
+    background: #344b8e;
+    padding: 3rem 0;
+    text-align: center;
+    border-top: 0.1rem solid rgba(255, 255, 255, 0.308) ;
+    font-size: 2.4rem;
+}
+footer ul li{
+    display: inline-block;
+    margin: 0 3rem;
+}
+footer ul li a{
+    text-decoration: none;
+    color: #fff;
+    text-transform: capitalize;
+}
+footer ul li a:hover{
+    color: #31aedc;
+}
+
+
+
+
+
+

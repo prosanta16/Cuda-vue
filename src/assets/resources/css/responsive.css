@@ -1,0 +1,48 @@
+@media only screen and (max-width:1024px)
+{
+    .row{
+        margin: 0 15px;
+    }
+    .main-nav{
+        display: none;
+    }
+    html{
+        font-size: 57.5%;
+    }
+    .client-pic{
+        width: 100%;
+        float: none;
+        text-align: center;
+    }
+    .client-review{
+        width: 100%;
+        float: none;
+        text-align: center;
+    }
+    .contact-section form{
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+/*
+@media only screen and (max-width:980px)
+{
+    .span_1_of_4{
+        width: 49.2%;
+    }
+    .span_1_of_4:nth-child(3){
+        margin-left: 0;
+    }
+}
+*/
+@media only screen and (max-width:768px)
+{
+    .little-des{
+        width: 100%;
+        margin-left: 0;
+    }
+    .hero-text-box h1{
+        font-size: 3rem;
+    }
+}
